@@ -1,61 +1,76 @@
-**WDI Fundamentals Unit 3**
+# Unit 3 Homework: Getting Our Cards in Order
 
----
+Now that we have covered variables and booleans, we can write code that simulates the cards in our game as well as compare them for a match.
 
-## Project
+Go back into the [project repo](https://github.com/ga-students/wdi-fundamentals-memorygame), wherever you've decided to put it, and open up the file `main.js` (inside the `starter-code` directory). This is where you'll be writing all of your code for all homework assignments.
 
-Now that we've learned a little bit about expressions, let's apply some of this material to our 'Rock Paper Scissors' project.
+## Exercise
 
----
+#### Requirements
 
-Go back into the project repo, wherever you've decided to put it, and open up the file `RockPaperScissors.js` (inside the `app/js` directory).
+In this section, you'll be working to create the cards that will make up your memory game. Each card will have a value of "queen" or "king" and there should be a total of four cards. Giving the cards a value means we can use comparison operators to check for equality. Let's get started!
 
-When you look inside the file you should first see a block of code that looks like this :
 
-```javascript
-var getInput = function() {
-   console.log("Please choose either 'rock', 'paper', or 'scissors'.")
-   var answer = prompt();
-   return answer;
-}
+##### Below are the steps to complete the assignment:
 
-var randomPlay = function() {
-    var randomNumber = Math.random();
-    if (randomNumber < 0.33) {
-        return 'rock';
-    } else if (randomNumber < 0.66) {
-        return 'paper';
-    } else {
-        return 'scissors';
-    }
-}
+1) Create four variables that simulate the cards in your game.
+
+- they should be `String` types
+- two should have a value of `"queen"` and the other two should be `"king"`
+- they will represent your cards (i.e. "queen" card)
+- name your variables `cardOne`, `cardTwo`, etc.
+
+Here's an example of one card:
+
+```js
+var cardOne = "queen";
 ```
 
-We recommend you don't edit this code right now, but feel free to look at it closely and try to figure out how it works - learning to read code is an important step in learning how to write code.
+2) Now that you have the four cards, you'll want to compare the two queen variables to check for equality. What does it evaluate to?
 
-When you're ready, skip ahead to the next section, shown below.
-
-```javascript
-var getPlayerMove = function(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
-}
-
-var getComputerMove = function(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
-}
+```js
+cardOne == cardTwo
 ```
 
-Similar to how you've done this in your exercises, you will need to replace the `/* Your Expression */` comment with an expression of your own creation. Instructions for how this expression should behave are laid out in the single-line comments above.
+>**_Reminder_**: Since you're working within the JavaScript file, `main.js`, which is connected to your `index.html` file, you can open the `index.html` in the browser and look into the console to see the results of your executed JS.
 
-> **CAUTION** For now, if you don't understand the `getInput()` or `randomPlay()` functions, you can safely ignore that stuff for now - we'll be covering all of that in depth in Chapter 5. Just focus on subbing in your new expressions.
+3) Now try to compare a king variable with a queen variable. For example, if cardOne is a queen and cardFour is a king below, what does this evaluate to?
 
-Go ahead and get started - once you've finished editing those two lines, save your code and make a commit to your project's repository.
+```js
+cardOne == cardFour
+```
 
----
-[Next up: Chapter 4](../04_chapter/intro.md)
+
+#### Deliverable:
+
+Once you've finished (and have tested your code), commit the changes you've made to the project's repository. Make sure you've commented your code!
+
+#### Pushing code up to the repository.
+
+In order to backup your code and track your work, you'll want to commit the changes you've made to the project's repository. You'll have to open up the terminal and `cd` into the correct folder that holds the cloned repository for this assignment. Once there, you'll have to complete these three steps:
+
+1) Stage your code
+
+`git add -a`
+
+2) Create a version of your stagged code
+
+`git commit -m 'created game logic'`
+
+3) Push your code to the GitHub repository
+
+`git push origin master`
+
+#### Still Stuck?
+
+> **NOTE** Remember, when you're programming, you need to figure out the solution before you ever start writing code. Below, you'll find a helpful general procedure you can follow:
+
+1. **Understand the problem.** In particular, try to determine (a) what you will be given, and (b) what you hope to get out. If you can't explain the problem in those terms, you won't be able to move further.
+
+2. **Come up with test cases (and eventually, tests).** Once you've figured out how your code is supposed to behave generally, pick out a couple of specific cases that you can use to confirm whether or not your code is working. For this assignment, this would include comparing the values of cards.
+
+3. **Solve the problem in English.** Or any human language, really. The point is, it's a good idea to pause and avoid *touching* your keyboard until you can start to explain, clearly and precisely, both what it is you're trying to do and how you're trying to do it. You can try sketching out the concept or outlining your procedure on paper, if it helps.
+
+4. **Write code, even if it's not the prettiest.** At this stage, don't worry if your code is elegant, readable, or robust. Just make it work to satisfy all of your test cases.
+
+5. **'Refactor' your code.** Now that your code is functional, take some time to make your code clean/efficient/robust. Just make sure that whatever changes you make don't break your code - you can keep an eye on this by testing your code and making sure that it still gives you the correct results.

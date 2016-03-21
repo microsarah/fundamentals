@@ -1,41 +1,52 @@
-**WDI Fundamentals Unit 4**
+# Unit 4 Homework: Game Logic
 
----
+In Unit 4, we covered some game-changing concepts (pun intended). For example, can you guess what type of feature we can now begin to implement in our memory card game? If you guessed game logic, you're right! For this section's homework, you will implement your knowledge of conditionals to help with the task of creating your game logic.
 
-## Project
+## Exercise
 
-Let's use what we've just learned about control flow to make some more progress on our 'Rock Paper Scissors' project.
+#### Requirements
 
----
+Based on whether or not your user discovers a match, notify them with a winning or losing message in a popup message using `alert`.
+**Hint:** What's an `alert`? Check out the documentation <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" target="_blank">here</a>
 
-Open up `RockPaperScissors.js` in your text editor of choice, and scroll down to the following code:
+>**Note:** In some of our other exercises, we have used `console.log` to give feedback from our code. However, as we start to have a more "user facing" mindset, we begin to code in a way that makes more sense for the user. For our game, this means notifying the user about a win or a loss with a popup rather than the console, a place where most users don't look.
 
-```javascript
-var getWinner = function(playerMove, computerMove) {
-    // This function should either give us back 'player', 'computer', or 'tie'.
-    // The rules of the game are that rock beats scissors, scissors beats paper, and paper beats rock.
-    // Assume that the only possible input values we can get are 'rock', 'paper', and 'scissors'.
+##### Below are the steps to complete the assignment.
+
+1) Create an `if else` statement checking for equality between two of your cards (you choose which ones).
+
+```js
+// `if` statement should consist of a boolean checking for equality between your created variables
+if (cardTwo === cardsThree) {
+
+} else {
+
 }
 ```
 
-Use control flow to determine which value gets `return`ed.
-HINT: the possible outcomes are either 'player' (if the player wins), 'computer' (if the computer wins), or 'tie' (if it's a draw).
+2) If values are equal, execute an `alert` with the message, "You found a match!". If values are not equal, execute an `alert` with the message, "Sorry, try again.".
 
-If you're still feeling stuck, take a look back at [Chapter 3](../03_chapter/intro.md). What expression could we write to tell us if the player (or computer) has won? What expression could tell us if there was a tie?
+```js
+// if the conditional is met, run the expression: alert("You found a match!")
+if (cardTwo === cardsThree) {
 
-> **NOTE** Remember, when you're programming, you need to figure out the solution before you ever start writing code. Below is a good general procedure you can follow.
+  alert('You found a match!');
 
-1. **Understand the problem.** In particular, try to determine (a) what you will be given, and (b) what you hope to get out. If you can't explain the problem in those kinds of terms, you won't be able to move further.
+// else, run the expression: alert("Sorry, try again.")
+} else {
 
-2. **Come up with test cases (and eventually, tests).** Once you've figured out how your code is supposed to behave generally, pick out a couple of specific cases that you can use to confirm whether or not your code is working. Once you've learned a little more about writing code, you'll actually use these test cases to write tester code, which can be used to automatically confirm whether or not your project's code is working.  *(Actually, this project has some tests built into it already, using a testing tool called Jasmine; to see the tests up close, just take a peek inside (but don't change!) the file `RockPaperScissorsSpec.js`, which sits inside the `spec` directory. These tests specify exactly how the code we write should behave - that's why they're called 'specs'!)*
+  alert("Sorry, try again.");
 
-3. **Solve the problem in English.** Or any human language, really. The point is, it's a good idea to pause and avoid *touching* your keyboard until you can start to explain, clearly and precisely, both what it is you're trying to do and how you're trying to do it. You can try sketching out the concept or outlining your procedure on paper, if it helps.
+}
+```
 
-4. **Write code, even if it's not the prettiest.** Don't worry at this stage if your code is elegant, readable, or robust. Just make it work enough to satisfy all of your test cases.
+When the `alert`s are working properly, you should see:
 
-5. **'Refactor' your code.** Now that everything works, take some time to make your code clean/efficient/robust/whatever in addition to functional. Just make sure that whatever changes you make don't break your code - you can keep an eye on this by testing your code and making sure that it still gives you the correct results.
+![](https://s3.amazonaws.com/f.cl.ly/items/1S1E0E3Q3m1K1G2L3C1A/Image%202016-03-06%20at%208.24.46%20AM.png?v=6094ee76)
 
-Once you've finished (and have tested your code), commit the changes you've made to the project's repository.
+#### Deliverable
+
+You'll want to keep track of all your hard work, so don't forget to ACP: **Add**, **Commit** and **Push** that code to GitHub!
 
 ---
 [Next up: Chapter 5](../05_chapter/intro.md)
