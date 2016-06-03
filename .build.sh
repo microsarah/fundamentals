@@ -3,7 +3,7 @@
 git fetch origin '+refs/heads/*:refs/heads/*'
 branches=`git ls-remote --heads origin  | sed 's?.*refs/heads/??'`
 latest=`git rev-parse HEAD`
-npm install -g gitbook gitbook-cli
+npm install -g gitbook-cli
 
 if [ -d dist ]; then
   rm -r dist
