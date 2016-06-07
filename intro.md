@@ -1,3 +1,6 @@
+**We’ve recently updated Fundamentals. This is version 2.1. You can find the new version (version 3.0) [here](http://fundamentals.generalassemb.ly).**
+<br>
+<br>
 ![GA Logo](assets/GA_logo.png)
 <br>
 <br>
