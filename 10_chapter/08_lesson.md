@@ -269,7 +269,7 @@ JavaScript has methods we can use to find an element based on an initial selecti
 This method will locate the parent of an initial selection.
 
 ```js
-Document.getElementsByTagName('li')[0].parentNode()
+document.getElementsByTagName('li')[0].parentNode()
 ```
 THis will return the parent of the first `<li>` element, which, in this case, is the `<ul>` element since it wraps all the `<li` elements.
 
